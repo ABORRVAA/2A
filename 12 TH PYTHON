@@ -1,0 +1,105 @@
+import pandas as pd
+import numpy as np
+print('''1_empty dataframe
+2_data frame from series
+3_data frame from list of list''')
+for i in range(1):
+    a=int(input('enter your choice:'))
+    if a==1:
+        print('empty dataframe')
+        b=pd.DataFrame()
+        print(b)
+    elif a==2:
+        b=list(input('enter your series1:'))
+        c=list(input('enter your series2:'))
+        d=list(input('enter your series3:'))
+        print('''labled index and column=1
+        positional index and column=2''')
+        f=int(input('enter your choice:'))
+        if f==1:
+            g=list(input('enter your index:'))
+            h=list(input('enter your column:'))
+            i=pd.DataFrame([b,c,d],index=g,columns=h)
+            print(i)
+        else:
+            e=pd.DataFrame([b,c,d])
+            print(e)
+    elif a==3:
+        b=list(input('enter your list1:'))
+        c=list(input('enter your list2:'))
+        d=list(input('enter your list3:'))
+        print('''labled index and column=1
+    positional index and column=2''')
+        f=int(input('enter your choice:'))
+        if f==1:
+            g=list(input('enter your index:'))
+            h=list(input('enter your column:'))
+            i=pd.DataFrame([b,c,d],index=g,columns=h)
+            print(i)
+        else:
+            e=pd.DataFrame([b,c,d])
+            print(e)
+    else:
+        print('error')
+print()
+print('''DATAFRAME
+4_to add a new row
+5_to add a new column
+ DATAFRAME ATTRIBUTES AND FUNTIONS:
+6_index
+7_columns
+8_dtype
+9_vales
+10_shape
+11_size
+12_dim
+13_empty
+14_axes
+15_transpose
+17_count
+18_len''')
+for a in range(11):
+    a=int(input('enter your choice'))
+    if a==4:
+        b=input('enter a the new name for row')
+        c=list(input('enter the  new value for row through list'))
+        i.loc[b]=c
+        print(i)
+    elif a==5:
+        b=input('enter a the new name for column')
+        c=list(input('enter the  new value for column through list'))
+        i[b]=c
+        print(i)
+    elif a==6:
+        print(i.index)
+    elif a==7:
+        print(i.columns)
+    elif a==8:
+        print(i.dtype)
+    elif a==9:
+        print(i.values)
+    elif a==10:
+        print(i.shape)
+    elif a==11:
+        print(i.size)
+    elif a==12:
+        print(i.ndim)
+    elif a==13:
+        print(i.empty)
+    elif a==14:
+        print(i.axes)
+    elif a==15:
+        print(i.T)
+    elif a==16:
+        a=int(input('''enter
+        1 to count row
+        2 to count columns'''))
+        if a==1:
+            print(i.count())
+        elif a==2:
+            print(i.count(1))
+    elif a==17:
+        print(len(i))
+    else:
+        print('error')
+print()
