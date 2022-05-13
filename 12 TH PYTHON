@@ -56,8 +56,11 @@ print('''DATAFRAME
 13_empty
 14_axes
 15_transpose
-17_count
-18_len''')
+16_count
+17_len
+SELECTION:
+19_multiple values
+20_single  value''')
 for a in range(11):
     a=int(input('enter your choice'))
     if a==4:
@@ -100,6 +103,77 @@ for a in range(11):
             print(i.count(1))
     elif a==17:
         print(len(i))
+    elif a==19:
+        print('''using 1.coloumns
+        2.index
+        3.loc
+        4.iloc''')
+        b=int(input('enter your choice:'))
+        if b==1:
+            print('''press 1 if your column in object
+            2 if your column in int''')
+            d=int(input('enter here:'))
+            if d==1:
+                c=input('''enter your column to be selected(variable):''')
+                print(i[[c]])
+            elif d==2:
+                c=int(input('''enter your column to be selected(int):'''))
+                print(i[[c]])
+            else:
+                print('^^error^^')
+        elif b==2:
+            print('''press 1 if your index in object
+            2 if your index in int''')
+            d=int(input('enter here:'))
+            if d==1:
+                f=input('''enter your index to be selected(variable):''')
+                print(i.loc[[f]])
+            elif d==2:
+                f=int(input('''enter your index to be selected(int):'''))
+                print(i.loc[[f]])
+            else:
+                print('^^error^^')
+        elif b==3:
+            e=input('enter your start row to be selected:')
+            f=input('enter your end row to be selected:')
+            g=input('''enter your start column to be selected:''')
+            h=input('''enter your end column to be selected:''')
+            print(i.loc[e:f,g:h])
+        elif b==4:
+            e=int(input('''enter your start row to be selected:'''))
+            f=int(input('''enter your end row to be selected:'''))
+            g=int(input('''enter your start column to be selected:'''))
+            h=int(input('''enter your end column to be selected:'''))
+            print(i.loc[e:f,g:h])
+        else:
+            print('error')
+    elif a==20:
+        print('''1.using iat
+        2.using at''')
+        a=int(input('enter your choice:'))
+        if a==1:
+            a=int(input('enter your row to be selected(in int):'))
+            b=int(input('''enter your column to be selected(in int):'''))
+            print(i.iat[a,b])
+        elif a==2: 
+            print('''press 1 if your column in int and index in object
+            press 2 if your column in int and index in int
+            press 3 if your column in object and index in int''')
+            e=int(input('enter your choice;'))
+            if e==1:
+                a=input('enter your row to be selected(in object):')
+                b=int(input('''enter your column to be selected(in int):'''))
+                print(i.at[a,b])
+            elif e==2:
+                a=int(input('enter your row to be selected(in int):'))
+                b=int(input('''enter your column to be selected(in int):'''))
+                print(i.at[a,b])
+            elif e==3:
+                a=int(input('enter your row to be selected(in int):'))
+                b=input('''enter your column to be selected(in object):''')
+                print(i.at[a,b])
+            else:
+                print('^^error^^')
     else:
         print('error')
 print()
