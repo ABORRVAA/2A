@@ -1,4 +1,8 @@
 import matplotlib.pyplot as plt
-x=[1,2,3,4,5]
-y=['a','b','c','d','e']
-plt.plot(x,y)
+x=[100,90,80,70,60,50]
+y=['harry potter','ron','hermoine','draco','ginny','dobby']
+plt.title('rank')
+plt.xlabel('mark')
+plt.ylabel('names')
+plt.plot(x,y,'r',marker='h',markersize=10,markeredgecolor='y',linewidth=2,linestyle='dashed')
+plt.show()
