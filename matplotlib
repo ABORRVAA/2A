@@ -1,8 +1,13 @@
 import matplotlib.pyplot as plt
-x=[100,90,80,70,60,50]
-y=['harry potter','ron','hermoine','draco','ginny','dobby']
+y=[100,90,80,70,60,50]
+x=['harry potter','ron','hermoine','draco','ginny','dobby']
 plt.title('rank')
 plt.xlabel('mark')
 plt.ylabel('names')
-plt.plot(x,y,'r',marker='h',markersize=10,markeredgecolor='y',linewidth=2,linestyle='dashed')
+plt.plot(y,x,'r',marker='h',markersize=10,markeredgecolor='y',linewidth=2,linestyle='dashed',label='a1')
+a=[1,2,3,5,5,6]
+plt.plot(y,a,'g',marker='*',markersize=10,markeredgecolor='y',linewidth=2,linestyle='dashed',label='a2')
+b=[6,7,8,9,10,11]
+plt.plot(y,b,'c',marker='>',markersize=10,markeredgecolor='y',linewidth=2,linestyle='dashed',label='a3')
+plt.legend()
 plt.show()
