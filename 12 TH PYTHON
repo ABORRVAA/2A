@@ -175,5 +175,5 @@ for a in range(11):
             else:
                 print('^^error^^')
     else:
-        print('error')
+        print('^^error^^')
 print()
