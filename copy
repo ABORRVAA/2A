@@ -67,3 +67,25 @@ plt.xlabel('t (s)')
 plt.ylabel('y (m)')
 plt.plot(tlist,ylist,'m.')
 plt.show()
+#implement different types of graphs available in python
+#bargraph
+import matplotlib.pyplot as plt 
+x = [10,20,30,40,50] 
+y = [10,50,60,20,30] 
+plt.bar(x,y) 
+plt.show() 
+#histogram
+z= [10, 5, 8, 4, 2] 
+plt.hist(z) 
+plt.show() 
+#line graph
+a = [5, 2, 9, 4, 7] 
+b = [10, 5, 8, 4, 2] 
+plt.plot(a,b) 
+plt.show() 
+#scatter graph
+x_values = [0,1,2,3,4,5]
+squares = [0,1,4,9,16,25]
+plt.scatter(x_values,squares, s=10, color = "pink")
+plt.show()
+
