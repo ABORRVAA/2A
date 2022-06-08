@@ -48,3 +48,9 @@ S=pd.DataFrame(P,index=['R4','R5','R6'],columns=['C2','C5','C6'])
 print(S)
 V=V.append(S)
 print(V)
+
+a=[[90,95,98],[91,62,33],[35,40,55]]
+t=pd.DataFrame(a,index=['a','b','c'],columns=['mat','phy','che'])
+print(t)
+print(t['mat':'che'])
+print(t.iloc[0:2,:])
