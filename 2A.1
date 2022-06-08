@@ -20,3 +20,13 @@ import numpy as np
 a=np.array([[101,113,124],[130,140,20],[115,123,105]])
 df=pd.DataFrame(a)
 print(df)
+
+arr=[31,28,31,30,31]
+ms=['Jan','Feb','Mar','Apr','May']
+a=pd.Series(data=arr,index=ms)
+print(a)
+print(a.dtype)
+print(a.ndim)
+print(a.size)
+print(a.empty)
+print(a.index)
