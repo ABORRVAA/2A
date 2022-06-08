@@ -62,3 +62,11 @@ L=s.rename({'A':'G','B':'H','C':'I'},axis='index')
 print(L)
 I=s.rename({'D':'J','E':'K','F':'L'},axis='columns')
 print(I)
+
+K={'target':[5600,8700,9000,3000],'sales':[580,680,780,415],'order':[60,70,15,30]}
+T=pd.DataFrame(K,index=['A','B','C','D'])
+print(T)
+H=T.drop('order',axis=1)
+print(H)
+I=T.drop('D',axis=0)
+print(I)
