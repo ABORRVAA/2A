@@ -2,3 +2,9 @@ data frame creation using 2d dict
 a={2018:{'English':85,'Maths':65,'Science':95,'Tamil':99},2019:{'English':69,'Maths':95,'Science':85,'Tamil':73},2020:{'English':99,'Maths':97,'Science':90,'Tamil':74}}
 ad=pd.DataFrame(a)
 print(ad)
+
+s1=pd.Series([1,2,3,4],index=['x','y','z','b'])
+s2=pd.Series([5,6,7,8],index=['x','y','z','b'])
+s3=pd.Series([9,10,11,12],index=['x','y','z','b'])
+df=pd.DataFrame([s1,s2,s3])
+print(df)
