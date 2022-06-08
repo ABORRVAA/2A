@@ -39,3 +39,12 @@ print(df.size)
 print(df.shape)
 print(df.ndim)
 print(df.empty)
+
+L=[[1,2,3],[4,5,6],[7,8]]
+V=pd.DataFrame(L,index=['R1','R2','R3'],columns=['C1','C2','C3'])
+print(V)
+P=[[10,20],[4,8],[17,18,21]]
+S=pd.DataFrame(P,index=['R4','R5','R6'],columns=['C2','C5','C6'])
+print(S)
+V=V.append(S)
+print(V)
