@@ -54,3 +54,11 @@ t=pd.DataFrame(a,index=['a','b','c'],columns=['mat','phy','che'])
 print(t)
 print(t['mat':'che'])
 print(t.iloc[0:2,:])
+
+A=[[1,2,3],[4,5,6],[7,8,9]]
+s=pd.DataFrame(A,index=['A','B','C'],columns=['D','E','F'])
+print(s)
+L=s.rename({'A':'G','B':'H','C':'I'},axis='index')
+print(L)
+I=s.rename({'D':'J','E':'K','F':'L'},axis='columns')
+print(I)
