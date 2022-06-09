@@ -70,3 +70,9 @@ H=T.drop('order',axis=1)
 print(H)
 I=T.drop('D',axis=0)
 print(I)
+
+a=[[90,95,98],[91,62,33],[35,40,55]]
+t=pd.DataFrame(a,index=['a','b','c'],columns=['mat','phy','che'])
+print(t)
+print(t[['mat','phy']])
+print(t.loc[['a','b']])
