@@ -119,3 +119,12 @@ print(f)
 
 g=s.sort_index(ascending=False)
 print(g)
+
+g=pd.DataFrame([{'a':1,'b':2,'c':3,'d':4},{'a':1,'b':2,'c':3,'d':4}],index=[1,2])
+print(g)
+print(g['c'])
+print(g.loc[2])
+g['c']=0
+print(g)
+g.loc[:]=1
+print(g)
