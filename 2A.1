@@ -128,3 +128,9 @@ g['c']=0
 print(g)
 g.loc[:]=1
 print(g)
+print(g.loc[[True,False]])
+print(len(g))
+
+g.axis=0
+print(g)
+print(g.drop('c',axis=1))
