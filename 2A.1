@@ -82,3 +82,21 @@ print(a)
 
 s=pd.Series([5,8,7,8],index=[x for x in 'amma'])
 print(s)
+
+print('ATTRIBUTES OF SERIES')
+print(s.index)
+print(s.index.name)
+print(s.values)
+print(s.shape)
+print(s.ndim)
+print(s.nbytes)
+print(s.size)
+print(s.hasnans)
+print(s.empty)
+print(s.name)
+
+a=s.head(-2)
+print(a)
+
+b=s.tail(-4)
+print(b)
