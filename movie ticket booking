@@ -20,3 +20,37 @@ for v in range(11):
         "2": "1.40-4.40",
         "3": "4.50-7.50",
         "4": "8.00-10.45"
+        
+        
+        import pandas as pd
+import numpy as np
+print('VAPHS THEATER')
+print('''1_KARUR
+2_COIMBATORE
+3_CHENNAI
+4_USA
+5_GOA
+6_UK''')
+a=int(input('ENTER THE PLACE NUMBER:'))
+if a==1:
+    print('MOVIE NAMES')
+    print(''' 1_HARRY POTTER
+    2_GREY MAN
+    3_SPIDER NO WAY HOME
+    4_BAD GENIUS
+    5_SEA BEAST''')
+    b=int(input('ENTER THE MOVIE NUMBER:'))
+    if b==1:
+        print('timming')
+        print(''' {"1": "10.00-1.00",
+        "2": "1.10-4.10",
+        "3": "4.20-7.20",
+        "4": "7.30-10.30"}''')
+        c=int(input('ENTER THE TIMMING NUMBER:'))
+        if c==1:
+             print('select the row(a-z):')
+             d=input('enter the row:')
+             if d==a:
+                 print('enter the columns number:')
+                 e=int(input('enter the seat number:'))
+print()
