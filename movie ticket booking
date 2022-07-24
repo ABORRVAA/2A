@@ -1,0 +1,15 @@
+print("VAPHS THEATER")
+print(''' 1_HARRY POTTER
+2_GREY MAN
+3_SPIDER NO WAY HOME
+4_BAD GENIUS
+5_SEA BEAST''')
+for v in range(11):
+    a=int(input('ENTER THE MOVIE NUMBER:'))
+    if a==1:
+        print(''' time:  1.morning 11am
+        2.afternoon 2:15
+        3.evening 5:30
+        4.nightshow 9:00 
+        5.midnightshow 1:00''')
+        b=int(input('ENTER THE MOVIE time:'))
