@@ -54,3 +54,102 @@ if a==1:
                  print('enter the columns number:')
                  e=int(input('enter the seat number:'))
 print()
+
+
+
+
+
+
+
+
+
+
+        if Seats < 10:
+            for num in table_of_chart.keys():
+                print(int(num)+1, end='  ')
+                for no in table_of_chart[num].values():
+                    print(no, end='  ')
+                print()
+        else:
+            count_num = 0
+            for num in table_of_chart.keys():
+                if int(list(table_of_chart.keys())[count_num]) < 9:
+                    print(int(num)+1, end='  ')
+                else:
+                    print(int(num)+1, end=' ')
+                count_key = 0
+                for no in table_of_chart[num].values():
+                    if int(list(table_of_chart[num].keys())[count_key]) <= 10:
+                        print(no, end='  ')
+                    else:
+                        print(no, end='  ')
+                    count_key += 1
+                count_num += 1
+                print()
+        print('Vacant Seats = ', Total_seat - Booked_seat)
+        print()
+
+    elif x == 2:
+        Row_number = int(input('Enter Row Number - \n'))
+        Column_number = int(input('Enter Column Number - \n'))
+        if Row_number in range(1, Row+1) and Column_number in range(1, Seats+1):
+            if table_of_chart[str(Row_number-1)][str(Column_number)] == 'S':
+                if Row*Seats <= 60:
+                    prize_of_ticket = 10
+                elif Row_number <= int(Row/2):
+                    prize_of_ticket = 10
+                else:
+                    prize_of_ticket = 8
+                print('prize_of_ticket - ', '$', prize_of_ticket)
+                conform = input('yes for booking and no for Stop booking - ')
+                person_detail = {}
+                if conform == 'yes':
+                    person_detail['Name'] = input('Enter Name - ')
+                    person_detail['Gender'] = input('Enter Gender - ')
+                    person_detail['Age'] = input('Enter Age - ')
+                    person_detail['Phone_No'] = input('Enter Phone number - ')
+                    person_detail['Ticket_prize'] = prize_of_ticket
+                    table_of_chart[str(Row_number-1)][str(Column_number)] = 'B'
+                    Booked_seat += 1
+                    Total_Income += prize_of_ticket
+                else:
+                    continue
+                Booked_ticket_Person[Row_number-1][Column_number-1] = person_detail
+                print('Booked Successfully')
+            else:
+                print('This seat already booked by some one')
+        else:
+            print()
+            print('***  Invalid Input  ***')
+        print()
+
+    elif x == 3:
+        print('Number of purchased Ticket - ', Booked_seat)
+        print('Percentage - ', class_call.find_percentage())
+        print('Current  Income - ', '$', prize_of_ticket)
+        print('Total Income - ', '$', Total_Income)
+        print()
+
+    elif x == 4:
+        Enter_row = int(input('Enter Row number - \n'))
+        Enter_column = int(input('Enter Column number - \n'))
+        if Enter_row in range(1, Row+1) and Enter_column in range(1, Seats+1):
+            if table_of_chart[str(Enter_row-1)][str(Enter_column)] == 'B':
+                person = Booked_ticket_Person[Enter_row - 1][Enter_column - 1]
+                print('Name - ', person['Name'])
+                print('Gender - ', person['Gender'])
+                print('Age - ', person['Age'])
+                print('Phone number - ', person['Phone_No'])
+                print('Ticket Prize - ', '$', person['Ticket_prize'])
+            else:
+                print()
+                print('---**---  Vacant seat  ---**---')
+        else:
+            print()
+            print('***  Invalid Input  ***')
+        print()
+
+    else:
+        print()
+        print('***  Invalid Input  ***')
+        print()
